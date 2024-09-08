@@ -6,54 +6,75 @@
     <title>我的 CV</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            color: #333;
             margin: 0;
             padding: 0;
+            background-color: #f2f2f2;
         }
         .container {
-            max-width: 900px;
+            width: 80%;
             margin: auto;
             padding: 20px;
             background: #fff;
-            border-radius: 8px;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         header {
             text-align: center;
+            border-bottom: 3px solid #4CAF50;
             padding-bottom: 20px;
-            border-bottom: 2px solid #333;
+            margin-bottom: 20px;
         }
-        h1, h2 {
+        header h1 {
             margin: 0;
+            font-size: 2.5em;
         }
-        h1 {
-            font-size: 2em;
-            color: #333;
-        }
-        h2 {
-            font-size: 1.5em;
+        header p {
+            margin: 0;
+            font-size: 1.2em;
             color: #666;
         }
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         .section h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-        }
-        .section p {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.5em;
             margin: 0;
         }
-        .skills ul {
+        .section p {
+            margin: 10px 0;
+        }
+        .section ul {
             list-style: none;
             padding: 0;
         }
-        .skills ul li {
-            background: #f9f9f9;
-            margin-bottom: 5px;
-            padding: 5px;
-            border-radius: 4px;
+        .section ul li {
+            background-color: #f9f9f9;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .section .job-title {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
         }
     </style>
 </head>
@@ -61,16 +82,16 @@
     <div class="container">
         <header>
             <h1>你的名字</h1>
-            <p>你的職業或簡短描述</p>
+            <p>你的職業 / 簡短描述</p>
         </header>
         <section class="personal-info section">
             <h2>個人簡介</h2>
-            <p>這裡可以寫一些關於你的簡短介紹。</p>
+            <p>簡短的自我介紹，強調你的主要技能和目標。</p>
         </section>
         <section class="experience section">
             <h2>工作經歷</h2>
             <div>
-                <h3>公司名稱 - 職位</h3>
+                <p class="job-title">公司名稱 - 職位</p>
                 <p>工作內容和成就描述。</p>
             </div>
             <!-- 可以添加更多工作經歷 -->
@@ -78,7 +99,7 @@
         <section class="education section">
             <h2>教育背景</h2>
             <div>
-                <h3>學校名稱 - 學位</h3>
+                <p class="job-title">學校名稱 - 學位</p>
                 <p>主修和成就描述。</p>
             </div>
             <!-- 可以添加更多教育背景 -->
@@ -92,7 +113,7 @@
                 <!-- 可以添加更多技能 -->
             </ul>
         </section>
-        <section class="contact section">
+        <section class="contact-info">
             <h2>聯絡方式</h2>
             <p>電話: 你的電話</p>
             <p>電子郵件: 你的電子郵件</p>
